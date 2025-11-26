@@ -23,7 +23,7 @@ jobs:
       uses: gradle/actions/setup-gradle@v4
 
     - name: Setup npm
-      run: npm install
+      run: npm install --legacy-peer-deps
 
     - name: go into Android src dir & make executable
       run: cd android && chmod +x ./gradlew
