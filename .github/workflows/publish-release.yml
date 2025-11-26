@@ -25,3 +25,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_VERSION: 'v1.2.3'  # Set your 
+          RELEASE_VERSION=: 'v1.2.3'
