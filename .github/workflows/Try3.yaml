@@ -22,11 +22,11 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
 
-    - name: go into Android src dir
-      run: cd android
+    - name: go into Android src dir & make executable
+      run: cd android && chmod +x ./gradlew
 
     - name: Execute Gradle build
-      run: cd android && ./gradlew build
+      run: cd android && sudo ./gradlew build
       # ...
     - name: "Build & test"
       run: |
