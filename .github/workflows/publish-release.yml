@@ -11,6 +11,8 @@ jobs:
       contents: write
       
     runs-on: ubuntu-latest
+    env:
+      RELEASE_VERSION: 'v1.2.3'  # Set your release version here
     steps:
       - uses: actions/checkout@v2
       - name: Get Node.js version
