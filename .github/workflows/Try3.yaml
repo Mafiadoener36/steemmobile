@@ -29,7 +29,7 @@ jobs:
       run: cd android && chmod +x ./gradlew
 
     - name: Execute Gradle build
-      run: cd android && sudo ./gradlew build
+      run: cd android && export hermesEnabled=false && sudo ./gradlew build
       # ...
     - name: "Build & test"
       run: |
