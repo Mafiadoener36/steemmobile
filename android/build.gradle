@@ -32,5 +32,3 @@ allprojects {
 }
 
 apply plugin: "com.facebook.react.rootproject"
-
-def hermesEnabled = project.ext.react.get("hermesEnabled", false)
