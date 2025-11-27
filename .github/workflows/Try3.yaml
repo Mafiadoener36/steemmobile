@@ -26,10 +26,11 @@ jobs:
       run: npm install --legacy-peer-deps
 
     - name: go into Android src dir & make executable
-      run: cd android && cd app && chmod +x ./gradlew
+      run: cd android && chmod +x ./gradlew
 
     - name: Execute Gradle build
-      run: cd android && cd app & export hermesEnabled=false && sudo ./gradlew build
+      run: cd android && export hermesEnabled=false && sudo ./gradlew build -PhermesEnabled=false
+
       # ...
     - name: "Build & test"
       run: |
